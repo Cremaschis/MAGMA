@@ -12,13 +12,50 @@ const useCases = [
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-4 pb-20 pt-6 sm:px-6 lg:px-8">
-      <section className="rounded-3xl border border-magma-500/40 bg-zinc-900/70 p-6 shadow-lava backdrop-blur sm:p-10">
-        <p className="mb-4 inline-block rounded-full border border-magma-400/30 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-magma-400">Entrá en Modo Magma</p>
-        <h1 className="text-4xl font-black leading-tight sm:text-6xl">Energía en el bolsillo. Foco en segundos.</h1>
-        <p className="mt-5 max-w-2xl text-zinc-300 sm:text-lg">100mg de cafeína en pouch. Sin azúcar, sin calorías, sin nicotina. Para gym, estudio, laburo y noches largas.</p>
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <button className="rounded-xl bg-magma-500 px-6 py-3 text-sm font-bold uppercase tracking-wide text-white transition hover:bg-magma-400">Comprar ahora</button>
-          <button className="rounded-xl border border-zinc-700 px-6 py-3 text-sm font-bold uppercase tracking-wide text-zinc-100 transition hover:border-magma-400">Ver cómo funciona</button>
+      <section className="relative isolate overflow-hidden rounded-[2rem] border border-magma-500/50 bg-black p-6 shadow-lava backdrop-blur sm:p-10 lg:min-h-[650px]">
+        <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_18%_20%,rgba(255,92,53,0.34),transparent_30%),radial-gradient(circle_at_80%_12%,rgba(242,72,34,0.22),transparent_28%),linear-gradient(135deg,rgba(12,12,14,0.96),rgba(8,8,10,0.86)_48%,rgba(31,6,2,0.92))]" />
+        <div className="absolute left-[-12%] top-[-18%] -z-10 h-80 w-80 rounded-full bg-magma-500/30 blur-3xl" />
+        <div className="absolute bottom-[-28%] right-[-10%] -z-10 h-[28rem] w-[28rem] rounded-full bg-magma-400/20 blur-3xl" />
+        <div className="hero-lava-vein absolute inset-x-0 bottom-0 -z-10 h-32 opacity-80" />
+
+        <div className="grid min-h-[560px] items-center gap-10 lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="relative z-10 max-w-3xl">
+            <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-magma-400/40 bg-magma-500/10 px-4 py-2 text-[0.68rem] font-black uppercase tracking-[0.28em] text-magma-50 shadow-[0_0_28px_rgba(242,72,34,0.25)]">
+              <span className="h-2 w-2 rounded-full bg-magma-400 shadow-[0_0_18px_#ff5c35]" />
+              Entrá en Modo Magma
+            </p>
+            <h1 className="text-5xl font-black uppercase leading-[0.88] tracking-[-0.07em] text-white sm:text-7xl lg:text-8xl">
+              Energía brutal. <span className="block bg-gradient-to-r from-magma-50 via-magma-400 to-magma-700 bg-clip-text text-transparent drop-shadow-[0_0_26px_rgba(255,92,53,0.35)]">Foco instantáneo.</span>
+            </h1>
+            <p className="mt-6 max-w-xl text-base font-medium leading-8 text-zinc-200 sm:text-xl">
+              100mg de cafeína en pouch para prender tu ritual antes del gym, el estudio, el laburo o la noche. Sin azúcar, sin calorías, sin nicotina: solo momentum.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <button className="group rounded-2xl bg-gradient-to-r from-magma-500 via-magma-400 to-magma-500 px-8 py-4 text-sm font-black uppercase tracking-[0.2em] text-white shadow-[0_0_34px_rgba(242,72,34,0.55)] transition hover:scale-[1.02] hover:shadow-[0_0_54px_rgba(255,92,53,0.8)]">
+                Activar Modo Magma
+                <span className="ml-2 inline-block transition group-hover:translate-x-1">→</span>
+              </button>
+              <button className="rounded-2xl border border-magma-400/40 bg-white/[0.04] px-8 py-4 text-sm font-black uppercase tracking-[0.18em] text-zinc-100 transition hover:border-magma-400 hover:bg-magma-500/10 hover:text-white">Ver el ritual</button>
+            </div>
+            <div className="mt-8 grid max-w-xl grid-cols-3 gap-3 text-center">
+              {["Gym", "Focus", "Night grind"].map((item) => (
+                <div key={item} className="rounded-2xl border border-white/10 bg-white/[0.055] px-3 py-3 text-xs font-black uppercase tracking-[0.18em] text-zinc-200 shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]">{item}</div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative min-h-[420px] lg:min-h-[560px]">
+            <div className="absolute right-0 top-2 h-[78%] w-[72%] overflow-hidden rounded-[2rem] border border-white/10 bg-[url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85')] bg-cover bg-center shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
+              <div className="absolute bottom-5 left-5 rounded-full border border-magma-400/35 bg-black/55 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-magma-50 backdrop-blur">Pre-gym ritual</div>
+            </div>
+            <div className="absolute bottom-6 left-0 h-[52%] w-[58%] overflow-hidden rounded-[1.75rem] border border-magma-400/25 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85')] bg-cover bg-center shadow-[0_30px_80px_rgba(242,72,34,0.16)]">
+              <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/45 to-magma-500/15" />
+              <div className="absolute bottom-4 left-4 text-3xl font-black uppercase tracking-[-0.06em] text-white">Deep<br />Focus</div>
+            </div>
+            <div className="absolute left-[42%] top-[36%] h-36 w-36 rounded-full border border-magma-400/50 bg-magma-500/20 blur-sm shadow-[0_0_70px_rgba(255,92,53,0.8)]" />
+            <div className="absolute left-[48%] top-[41%] flex h-24 w-24 items-center justify-center rounded-full border border-magma-50/30 bg-black/70 text-center text-[0.62rem] font-black uppercase tracking-[0.2em] text-magma-50 shadow-[0_0_45px_rgba(255,92,53,0.7)] backdrop-blur">100mg<br />caffeine</div>
+          </div>
         </div>
       </section>
 
