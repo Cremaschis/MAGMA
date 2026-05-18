@@ -45,16 +45,37 @@ export default function Home() {
           </div>
 
           <div className="relative min-h-[420px] lg:min-h-[560px]">
-            <div className="absolute right-0 top-2 h-[78%] w-[72%] overflow-hidden rounded-[2rem] border border-white/10 bg-[url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85')] bg-cover bg-center shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-              <div className="absolute bottom-5 left-5 rounded-full border border-magma-400/35 bg-black/55 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-magma-50 backdrop-blur">Pre-gym ritual</div>
+            <div className="hero-video-glow absolute inset-x-0 top-4 mx-auto aspect-[9/12] max-h-[520px] w-full max-w-[390px] rounded-[2rem] p-px sm:top-0 sm:max-w-[430px] lg:right-0 lg:left-auto lg:mx-0 lg:aspect-[4/5] lg:max-h-none lg:w-[88%]">
+              <div className="relative h-full overflow-hidden rounded-[calc(2rem-1px)] border border-white/10 bg-zinc-950 shadow-[0_35px_90px_rgba(0,0,0,0.62)]">
+                <video
+                  className="h-full w-full object-cover opacity-95 saturate-[1.15]"
+                  src="/videos/magma-hero.mp4"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  aria-label="Magma performance ritual hero video"
+                />
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,transparent_0%,rgba(0,0,0,0.10)_30%,rgba(0,0,0,0.72)_100%)]" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/20 mix-blend-multiply" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-black/65 via-transparent to-magma-950/35" />
+                <div className="absolute left-5 top-5 rounded-full border border-magma-400/35 bg-black/55 px-4 py-2 text-[0.62rem] font-black uppercase tracking-[0.24em] text-magma-50 shadow-[0_0_28px_rgba(255,92,53,0.28)] backdrop-blur">
+                  Performance ritual
+                </div>
+                <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-4">
+                  <div>
+                    <p className="text-[0.62rem] font-black uppercase tracking-[0.28em] text-magma-200/90">Modo Magma</p>
+                    <p className="mt-1 text-3xl font-black uppercase leading-[0.9] tracking-[-0.06em] text-white drop-shadow-[0_0_24px_rgba(0,0,0,0.65)]">Ready<br />to ignite</p>
+                  </div>
+                  <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border border-magma-50/30 bg-black/65 text-center text-[0.56rem] font-black uppercase tracking-[0.18em] text-magma-50 shadow-[0_0_45px_rgba(255,92,53,0.7)] backdrop-blur">
+                    100mg<br />caffeine
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="absolute bottom-6 left-0 h-[52%] w-[58%] overflow-hidden rounded-[1.75rem] border border-magma-400/25 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85')] bg-cover bg-center shadow-[0_30px_80px_rgba(242,72,34,0.16)]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/45 to-magma-500/15" />
-              <div className="absolute bottom-4 left-4 text-3xl font-black uppercase tracking-[-0.06em] text-white">Deep<br />Focus</div>
-            </div>
-            <div className="absolute left-[42%] top-[36%] h-36 w-36 rounded-full border border-magma-400/50 bg-magma-500/20 blur-sm shadow-[0_0_70px_rgba(255,92,53,0.8)]" />
-            <div className="absolute left-[48%] top-[41%] flex h-24 w-24 items-center justify-center rounded-full border border-magma-50/30 bg-black/70 text-center text-[0.62rem] font-black uppercase tracking-[0.2em] text-magma-50 shadow-[0_0_45px_rgba(255,92,53,0.7)] backdrop-blur">100mg<br />caffeine</div>
+            <div className="pointer-events-none absolute -right-8 top-14 h-52 w-52 rounded-full bg-magma-500/20 blur-3xl" />
+            <div className="pointer-events-none absolute bottom-8 left-2 h-40 w-40 rounded-full bg-magma-400/15 blur-3xl" />
           </div>
         </div>
       </section>
