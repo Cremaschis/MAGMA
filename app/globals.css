@@ -13,3 +13,19 @@ body {
     radial-gradient(circle at 90% 0%, rgba(255, 92, 53, 0.15), transparent 30%),
     linear-gradient(180deg, #090909 0%, #070707 100%);
 }
+
+.hero-lava-vein {
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(255, 92, 53, 0.14) 14%, rgba(242, 72, 34, 0.9) 32%, rgba(255, 184, 107, 0.72) 46%, rgba(242, 72, 34, 0.9) 61%, rgba(255, 92, 53, 0.16) 80%, transparent 100%);
+  filter: blur(18px);
+  transform: translateY(42%);
+}
+
+.hero-lava-vein::after {
+  content: "";
+  position: absolute;
+  inset: 36% 10% 22%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(255, 214, 170, 0.9), rgba(255, 92, 53, 0.95), transparent);
+  box-shadow: 0 0 48px rgba(255, 92, 53, 0.75);
+}
