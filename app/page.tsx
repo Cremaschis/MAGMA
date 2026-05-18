@@ -44,17 +44,24 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative min-h-[420px] lg:min-h-[560px]">
-            <div className="absolute right-0 top-2 h-[78%] w-[72%] overflow-hidden rounded-[2rem] border border-white/10 bg-[url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85')] bg-cover bg-center shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-              <div className="absolute bottom-5 left-5 rounded-full border border-magma-400/35 bg-black/55 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-magma-50 backdrop-blur">Pre-gym ritual</div>
+          <div className="relative z-10 flex min-h-[420px] items-center justify-center lg:min-h-[560px]">
+            <div className="absolute inset-4 rounded-[2.25rem] bg-magma-500/25 blur-3xl" />
+            <div className="relative w-full overflow-hidden rounded-[2rem] border border-magma-400/35 bg-black shadow-[0_35px_100px_rgba(242,72,34,0.28),0_40px_100px_rgba(0,0,0,0.65)] sm:rounded-[2.5rem]">
+              <video
+                src="/videos/magma-hero.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="aspect-[4/5] h-full min-h-[420px] w-full object-cover sm:aspect-[16/13] lg:min-h-[560px]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_18%,transparent_0%,rgba(0,0,0,0.12)_36%,rgba(0,0,0,0.82)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/90 via-black/18 to-black/35" />
+              <div className="pointer-events-none absolute inset-x-8 bottom-0 h-28 rounded-full bg-magma-500/35 blur-3xl" />
+              <div className="absolute bottom-5 left-5 rounded-full border border-magma-400/40 bg-black/60 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-magma-50 shadow-[0_0_30px_rgba(255,92,53,0.45)] backdrop-blur sm:bottom-7 sm:left-7">
+                Modo Magma ON
+              </div>
             </div>
-            <div className="absolute bottom-6 left-0 h-[52%] w-[58%] overflow-hidden rounded-[1.75rem] border border-magma-400/25 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=85')] bg-cover bg-center shadow-[0_30px_80px_rgba(242,72,34,0.16)]">
-              <div className="absolute inset-0 bg-gradient-to-tr from-black via-black/45 to-magma-500/15" />
-              <div className="absolute bottom-4 left-4 text-3xl font-black uppercase tracking-[-0.06em] text-white">Deep<br />Focus</div>
-            </div>
-            <div className="absolute left-[42%] top-[36%] h-36 w-36 rounded-full border border-magma-400/50 bg-magma-500/20 blur-sm shadow-[0_0_70px_rgba(255,92,53,0.8)]" />
-            <div className="absolute left-[48%] top-[41%] flex h-24 w-24 items-center justify-center rounded-full border border-magma-50/30 bg-black/70 text-center text-[0.62rem] font-black uppercase tracking-[0.2em] text-magma-50 shadow-[0_0_45px_rgba(255,92,53,0.7)] backdrop-blur">100mg<br />caffeine</div>
           </div>
         </div>
       </section>
