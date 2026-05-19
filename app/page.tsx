@@ -45,7 +45,18 @@ export default function Home() {
           </div>
 
           <div className="relative min-h-[420px] lg:min-h-[560px]">
-            <div className="absolute right-0 top-2 h-[78%] w-[72%] overflow-hidden rounded-[2rem] border border-white/10 bg-[url('https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85')] bg-cover bg-center shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
+            <div className="absolute right-0 top-2 h-[78%] w-[72%] overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-950 shadow-[0_35px_90px_rgba(0,0,0,0.55)]">
+              <video
+                className="h-full w-full object-cover"
+                preload="metadata"
+                muted
+                loop
+                playsInline
+                autoPlay
+                poster="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=900&q=85"
+              >
+                <source src="/videos/hero.mp4" type="video/mp4" />
+              </video>
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
               <div className="absolute bottom-5 left-5 rounded-full border border-magma-400/35 bg-black/55 px-4 py-2 text-xs font-black uppercase tracking-[0.22em] text-magma-50 backdrop-blur">Pre-gym ritual</div>
             </div>
